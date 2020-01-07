@@ -6,5 +6,18 @@ var guessesLeft = 9;
 var lettersGuessed = [];
 var computerGuesses = [];
 
+window.onload = function () {
+    var compGuess = computerGuesses[Math.floor(Math.random() * computerGuesses.length)];
+    computerGuesses.push(compGuess);
+    console.log(computerGuesses[0]);
+}
+
+document.onkeyup = function(event) {
+    var playerGuess = event.key;
+    lettersGuessed.push(playerGuess);
+    console.log(computerGuess[0]);
+}
+
+
 
 
