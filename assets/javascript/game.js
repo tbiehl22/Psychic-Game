@@ -32,7 +32,22 @@ else if ((playerGuess !== computerGuesses[0])  && (guessesLeft > 0)) {
     guessesLeft = guessesLeft-1;
 }
 
+else {
+    losses++;
+    guessesLeft = 9;
+    lettersGuessed.lenth = 0;
+    computerGuesses.length = 0;
+    var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+}
 
+var html = "<p>Guess what letter I'm thinking of</p>" +
+           "<p>Wins: " + wins + "</p>" +
+           "<p>Losses: " + losses + "</p>" +
+           "<p>Guesses left: " + guessesLeft + "</p>" +
+           "<p>Your guesses so far: " + lettersGuessed + "</p>";
+
+
+document.querySelector("#game").innerHTML = html;
 
 
 
