@@ -16,7 +16,7 @@ document.onkeyup = function(event) {
     var playerGuess = event.key;
     lettersGuessed.push(playerGuess);
     console.log(computerGuess[0]);
-}
+
 
 if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
     wins++;
@@ -49,7 +49,7 @@ var html = "<p>Guess what letter I'm thinking of</p>" +
 
 document.querySelector("#game").innerHTML = html;
 
-
+}
 
 
 
