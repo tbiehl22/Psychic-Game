@@ -15,8 +15,6 @@ window.onload = function () {
 document.onkeyup = function(event) {
     var playerGuess = event.key;
     lettersGuessed.push(playerGuess);
-    console.log(computerGuess[0]);
-
 
 if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
     wins++;
@@ -24,11 +22,11 @@ if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
     lettersGuessed.length = 0;
     computerGuess.length = 0;
     var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    computerGuesses.push(compGuess);
-    console.log(computerGuess[0]);
+    computerGuess.push(compGuess);
+    
 }
 
-else if ((playerGuess !== computerGuess[0])  && (guessesLeft > 0)) {
+else if ((playerGuess !== computerGuess[0]) && (guessesLeft > 0)) {
     guessesLeft = guessesLeft-1;
 }
 
@@ -38,6 +36,7 @@ else {
     lettersGuessed.length = 0;
     computerGuess.length = 0;
     var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    computerGuess.push(compGuess);
 }
 
 var html = "<p>Guess what letter I'm thinking of</p>" +
@@ -47,9 +46,9 @@ var html = "<p>Guess what letter I'm thinking of</p>" +
            "<p>Your guesses so far: " + lettersGuessed + "</p>";
 
 
-document.querySelector("#game").innerHTML = html;
+document.querySelector("#gameplay").innerHTML = html;
 
-};
+}
 
 
 
