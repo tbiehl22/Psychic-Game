@@ -4,12 +4,12 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var lettersGuessed = [];
-var computerGuesses = [];
+var computerGuess = [];
 
 window.onload = function () {
-    var compGuess = computerGuesses[Math.floor(Math.random() * computerGuesses.length)];
-    computerGuesses.push(compGuess);
-    console.log(computerGuesses[0]);
+    var compGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)];
+    computerGuess.push(compGuess);
+    console.log(computerGuess[0]);
 }
 
 document.onkeyup = function(event) {
@@ -22,13 +22,13 @@ if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
     wins++;
     guessesLeft = 9;
     lettersGuessed.lenth = 0;
-    computerGuesses.lenth = 0;
+    computerGuess.lenth = 0;
     var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.lenth)];
     computerGuesses.push(compGuess);
-    console.log(computerGuesses[0]);
+    console.log(computerGuess[0]);
 }
 
-else if ((playerGuess !== computerGuesses[0])  && (guessesLeft > 0)) {
+else if ((playerGuess !== computerGuess[0])  && (guessesLeft > 0)) {
     guessesLeft = guessesLeft-1;
 }
 
@@ -36,7 +36,7 @@ else {
     losses++;
     guessesLeft = 9;
     lettersGuessed.lenth = 0;
-    computerGuesses.length = 0;
+    computerGuess.length = 0;
     var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
