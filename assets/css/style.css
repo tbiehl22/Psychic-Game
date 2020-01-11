@@ -1,0 +1,21 @@
+header {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-container {
+    font-size: 30px;
+    margin: 40px;
+}
+

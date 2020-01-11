@@ -39,11 +39,10 @@ else {
     computerGuess.push(compGuess);
 }
 
-var html = "<p>Guess what letter I'm thinking of</p>" +
-           "<p>Wins: " + wins + "</p>" +
+var html = "<p>Wins: " + wins + "</p>" +
            "<p>Losses: " + losses + "</p>" +
-           "<p>Guesses left: " + guessesLeft + "</p>" +
-           "<p>Your guesses so far: " + lettersGuessed + "</p>";
+           "<p>Guesses Left: " + guessesLeft + "</p>" +
+           "<p>Your Guesses So Far: " + lettersGuessed + "</p>";
 
 
 document.querySelector("#gameplay").innerHTML = html;
